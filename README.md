@@ -34,20 +34,70 @@ A secure file storage system built with Python, featuring AES-256-GCM encryption
 
 ## Installation
 1. Clone the repository
-- git clone https://github.com/<your-username>/Secure-File-Storage-System.git
-- cd Secure-File-Storage-System
+- `git clone https://github.com/rajeevmore112/Secure-Storage-App.git`
+- `cd Secure-Storage-App`
 
 2. Create virtual environment (recommended)
-- python -m venv venv
-- venv\Scripts\activate     # Windows
+- `python -m venv venv`
+- `venv\Scripts\activate`     # Windows
 
 4. Install dependencies
-- pip install -r requirements.txt
+- `pip install -r requirements.txt`
 
 ## Running the Application
 GUI Version
-- python secure_storage_gui_v2.py
+- `python secure_storage_gui_v2.py`
 
 CLI Version
-- python secure_storage_pw.py
+- `python secure_storage_pw.py`
 
+## Security Notes
+- AES-256-GCM provides authenticated encryption (confidentiality + integrity).
+- PBKDF2 key stretching increases resistance against password cracking.
+- Secure wipe uses 3-pass overwriting but may not fully erase data on SSDs due to TRIM.
+- Users are advised to use strong passwords (12+ characters recommended).
+- Encryption is symmetric — losing your password means losing access permanently.
+
+## Limitations
+- Secure wipe effectiveness is not guaranteed on SSDs.
+- Application currently encrypts/decrypts one file at a time (no bulk folder mode).
+- Only supports local file encryption (not cloud/stream encryption).
+
+## Future Enhancements
+- Add folder/batch encryption support
+- Add dark/light mode theme for the GUI
+- Add support for AES-256-CBC mode with HMAC
+- Add ability to verify file integrity before decrypting
+- Add option to export/import encryption profiles
+- Add automatic zipped vault encryption
+
+## Download (Windows EXE)
+A pre-built Windows executable is available under **Releases**:
+
+👉 https://github.com/rajeevmore112/Secure-Storage-App/releases
+
+Download the `.zip`, extract it, and run `SecureStorage.exe`.
+
+## Project Structure
+Secure-Storage-App/
+│
+│── assets/
+│   │── App_GUI.jpg
+│   │── Deletion_Confirmation.jpg
+│   │── Details_Inserted.jpg
+│   │── File_Encrypted.jpg
+│   │── File_Encrypted_and_Wiped.jpg
+│   │── File_Normal.jpg
+│   └── File_Wiped_and_Decrypted.jpg
+│
+│── Releases/
+│   └── Secure-Storage-App.7z
+│
+├── LICENSE                       # Apache 2.0 License
+├── README.md                     # Documentation
+├── requirements.txt              # Dependencies
+├── secure_storage_gui_v2.py      # GUI application (AES-256-GCM)
+└── secure_storage_pw.py          # CLI encryption tool
+
+## License
+This project is licensed under the Apache 2.0 License — see the LICENSE file for details.

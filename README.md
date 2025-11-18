@@ -63,14 +63,6 @@ CLI Version
 - Application currently encrypts/decrypts one file at a time (no bulk folder mode).
 - Only supports local file encryption (not cloud/stream encryption).
 
-## Future Enhancements
-- Add folder/batch encryption support
-- Add dark/light mode theme for the GUI
-- Add support for AES-256-CBC mode with HMAC
-- Add ability to verify file integrity before decrypting
-- Add option to export/import encryption profiles
-- Add automatic zipped vault encryption
-
 ## Download (Windows EXE)
 A pre-built Windows executable is available under **Releases**:
 

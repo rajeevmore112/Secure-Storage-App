@@ -84,9 +84,6 @@ Secure-Storage-App/
 │   │── File_Normal.jpg
 │   └── File_Wiped_and_Decrypted.jpg
 │
-│── Releases/
-│   └── Secure-Storage-App.7z
-│
 ├── LICENSE                       # Apache 2.0 License
 ├── README.md                     # Documentation
 ├── requirements.txt              # Dependencies
